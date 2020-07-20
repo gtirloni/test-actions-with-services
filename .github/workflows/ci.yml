@@ -28,8 +28,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Run netstat
+        run: netstat -antp | grep 5984
+        
       - name: Connect to CouchDB service
         run: curl http://localhost:25984
 
-      - name: Run netstat
-        run: netstat -antp | grep 5984
+
