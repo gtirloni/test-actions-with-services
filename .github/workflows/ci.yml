@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Run netstat
-        run: netstat -antp | grep 5984
+        run: sudo netstat -antp
         
       - name: Connect to CouchDB service
         run: curl http://localhost:25984
