@@ -31,5 +31,5 @@ jobs:
       - name: Connect to CouchDB service
         run: curl http://couchdb:25984
 
-      - name: Run nestat
+      - name: Run netstat
         run: netstat -antp | grep 5984
